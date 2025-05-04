@@ -37,12 +37,12 @@ import commentlikeicon from './white-heart.png'
 import commentlogo from './comment.png'
 import share from './share.png'
 import save from './save.png'
-
+import noprofile from './noprofile.jpg'
 
 import photosvideos from './photosvideos.png'
 export const asstes = {
      instagram,
-     
+     noprofile,
      
      photosvideos,
     
