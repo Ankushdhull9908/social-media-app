@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../Context'
 import { asstes } from '../assets/assets'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 function SignUpForm() {
@@ -109,7 +109,7 @@ function SignUpForm() {
   return (
     
       <div className="loginform">
-      <ToastContainer />
+      
 
 <div className="formlogo">
   <img src={asstes.instagram} alt='instagram'/>
