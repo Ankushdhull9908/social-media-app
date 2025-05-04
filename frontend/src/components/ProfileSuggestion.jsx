@@ -23,7 +23,7 @@ function ProfileSuggestion() {
         <div className="rightprofilesection">
           <div className="profilebox">
             <div className="dp">
-            <img src={logindata.userprofile} onClick={()=> navigate(`/profile/${logindata.name}`)}/>
+            <img src={logindata.userprofile==="empty" ? asstes.noprofile : logindata.userprofile} onClick={()=> navigate(`/profile/${logindata.name}`)}/>
 
             </div>
             <div className="idnameanduname">
