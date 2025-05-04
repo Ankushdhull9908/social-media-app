@@ -337,7 +337,7 @@ function UserDetailsProfile(props) {
           
             
             async function submitdata() {
-              await fetch(`http://localhost:8080/search/${name}`, {
+              await fetch(`https://social-media-app-0uma.onrender.com/search/${name}`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
