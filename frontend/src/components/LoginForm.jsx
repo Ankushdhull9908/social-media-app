@@ -40,9 +40,11 @@ function LoginForm() {
 
                 sucessfulllogin()
 
+                const profileImage = data.data.userprofile === "empty" ? asstes.noprofle : data.data.userprofile;
+
                 setTimeout(() => {
                   localStorage.setItem('userdata',JSON.stringify(data.data))
-                  changelogindata({name:data.data.name,fullname:data.data.fullname,userId:data.data.userId,email:data.data.email,userprofile:data.data.userprofile})
+                  changelogindata({name:data.data.name,fullname:data.data.fullname,userId:data.data.userId,email:data.data.email,userprofile:profileImage})
                   navigate('/home')
                   
                 }, 3000);
