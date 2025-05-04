@@ -239,6 +239,7 @@
 .someonemsg img{
     height: 25px;
     border-radius: 50%;
+    width: 25px;
 }
 
 .chatbox .someonemsg p{
