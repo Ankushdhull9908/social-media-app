@@ -1,0 +1,32 @@
+
+
+.useruploads .reelscollections{
+    
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    margin: auto;
+  
+}
+
+
+.reelscollections video{
+    height:360px;
+    width: 220px;
+    flex-shrink: 0;
+    margin: 10px 2px 0px 0px;
+    transition: filter 0.2s;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.reelscollections video:hover{
+    filter:brightness(0.4)
+}

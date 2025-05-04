@@ -1,0 +1,93 @@
+.contentsection{
+    height: 70vh;
+    
+    width: 100%;
+    
+}
+
+.contentsection .allpostmainpage{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    flex-direction: column;
+}
+
+.suggestions .suggestionheading{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    height: 10%;
+  
+    margin: 0px 0px 20px 0px
+}
+
+
+
+.contentsection .suggestions{
+
+    margin-top: 40px;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.suggestions .suggestionbox{
+    font-family:'Times New Roman', Times, serif;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 280px;
+    margin: 10px 20px 10px 0px;
+    width: 200px;
+    border: 0.1px solid #ddd;
+    padding-top: 10px;
+}
+
+.suggestions .suggestionbox button{
+    height: 55px;
+    width: 100%;
+    border: none;
+    border-top: 0.1px solid #ddd;
+    
+    outline: none;
+    background: transparent;
+    color: blue;
+    font-weight: 500;
+    font-style: bold;
+}
+
+.suggestions .suggestionbox .nameandverified{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+
+.suggestionbox img{
+   
+    height: 125px;
+    border-radius: 50%;
+}
+
+.contentsection .post{
+    height: 585px;
+    width: 468px;
+    margin: 0px 0px 20px 0px;
+    border-radius: 5px;
+}
+
+.contentsection .post img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}

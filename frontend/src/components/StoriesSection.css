@@ -1,0 +1,39 @@
+.stories{
+    position: relative;
+    margin-top: 10px;
+    height: 15vh;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-x: auto;
+    
+    padding: 20px;
+    margin: auto;
+    font-size: 13px;
+    color: grey;
+  
+}
+
+.stories .story{
+    height: 100%;
+    width: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.stories .story img{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.stories::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }

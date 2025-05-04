@@ -1,0 +1,23 @@
+.home{
+    height: 100vh;
+    
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction:row;
+    overflow-y: scroll;
+}
+
+
+.main{
+    height: 100%;
+    width: 65%;
+   
+
+}
+
+.profileandsuggestions{
+    width: 30%;
+    height: 100%;
+    
+}

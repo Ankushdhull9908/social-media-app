@@ -1,0 +1,30 @@
+.followingpage{
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.followingpage .followinguser{
+    padding: 10px;
+    height: auto;
+    width: 30%;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+
+    border: none;
+    border: 0.1px solid #ddd;
+   
+}
+
+.followingpage .followinguser img{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+}

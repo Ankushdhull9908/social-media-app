@@ -1,0 +1,166 @@
+.createpost{
+    height: 100vh;
+    width: 100%;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createpost .selectfilesbox{
+
+    height: 80vh;
+    border-radius: 15px;
+    width: 30vw;
+     border: 0.1px solid #ddd;
+}
+
+.selectfilesbox .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border-bottom: 0.1px solid #ddd;
+    
+}
+
+.heading h4{
+    font-weight: 400;
+}
+
+
+.selectfilesbox .imageandbtns{
+    height: 90%;
+    width: 100%;
+
+}
+
+.imageandbtns .images{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.images img{
+    height: 100px;
+    width: 100px;
+}
+
+
+.imageandbtns .dragphotosvideostxt{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageandbtns .btns{
+    height: 20%;
+    width: 100%;
+    position: relative;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btns button{
+    height: 35px;
+    width: 200px;
+    padding: 5px;
+    background-color: #1997f1;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: 500;
+    position: absolute;
+    left: 140px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.btns input{
+    position: relative;
+    margin: auto;
+    left: 50px;
+    
+}
+
+.btns button:hover{
+    background-color: #1877F2;
+}
+
+.createpost .createpostbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 58vw;
+    border: 0.1px solid #ddd;
+    border-radius: 15px;
+    flex-direction: column;
+}
+.createpostmainsection .createpostimg{
+    height: 100%;
+    width: 50%;
+}
+
+.createpostimg img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.createpostmainsection .userdplocationandpostbio{
+    height: 100%;
+    width: 50%;
+   
+}
+
+.createpostbox .heading{
+    position: relative;
+    height: 10%;
+    width: 100%;
+    border-bottom: 0.1px solid #ddd;
+    border-radius: 15px;
+}
+
+.createpostbox .heading button{
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    color: #1997f1;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.createpostbox .heading h4{
+    top: 10px;
+    position: absolute;
+    left: 42%;
+   
+}
+
+
+
+.createpostbox .createpostmainsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 90%;
+    border-radius: 15px;
+    width: 100%;
+}
+
+

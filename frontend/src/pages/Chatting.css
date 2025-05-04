@@ -1,0 +1,339 @@
+.chatting{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.chatting .chattingbox{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.emptychattingbox
+{
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emptychattingbox img{
+    height: 75px;
+   
+}
+
+.emptychattingbox button{
+    height: 35px;
+    width: 110px;
+    border: none;
+    background-color: #3797F0;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+
+
+.contacts .msgandrequest{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    flex-direction: row;
+     margin: 15px 0px;
+    padding: 10px 0px;
+ 
+}
+
+
+
+.contacts .msgandrequest p{
+    font-size: 13px;
+    color: grey;
+}
+
+.contacts .contact{
+    
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 90%;
+    padding: 10px 10px;
+    cursor: pointer;
+
+
+}
+
+.contacts .contact:hover{
+    background-color: #ddd;
+}
+
+.contacts .contact p{
+    font-size: 15px;
+}
+
+.contacts .contact img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.chatbox{
+    position: relative;
+    height: 80%;
+    width: 100%;
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    overflow-y: auto;
+
+}
+
+.chatbox .userprofileinsidechatbox{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    height: 35%;
+    width: 50%;
+
+}
+
+
+
+.userprofileinsidechatbox button{
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    padding: 10px 10px;
+    background-color: #ddd;
+    
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.userprofileinsidechatbox button:hover{
+    background-color: #bdbbbb;
+}
+
+.chatbox .userprofileinsidechatbox img{
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+}
+
+.userprofileinsidechatbox .nameandverified img{
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.chattingbox .chatuserprofile{
+    position: relative;
+    height: 10vh;
+  
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: left;
+    border-bottom: 0.1px solid #ddd;
+}
+
+.dpnameverified{
+    position: absolute;
+    left: 20px;
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-direction: row;
+    align-items: left;
+    cursor: pointer;
+    
+
+}
+
+.chatbox .mymessage{
+  
+    height: auto;
+    width: 90%;
+    gap: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+
+}
+
+.chatbox .someonemsg img{
+    position: relative;
+    top: 14px;
+}
+
+.chatbox .mymessage p{
+    height: auto;
+    padding: 8px;
+    width: auto;
+    margin: 5px 0px;
+    background-color: #1987ef;
+    border-radius: 25px;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#typingstatusincontacts{
+    font-size: 12px;
+    color: grey;
+}
+.someonemsg .show{
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 10px;
+}
+
+.chatbox .someonemsg{
+   
+    height: auto;
+    width: 90%;
+    gap: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    
+   
+
+}
+
+.mymessage img{
+    height: 25px;
+    border-radius: 50%;
+}
+
+.someonemsg img{
+    height: 25px;
+    border-radius: 50%;
+}
+
+.chatbox .someonemsg p{
+    height: auto;
+    padding: 8px;
+    width: auto;
+    margin: 5px 0px;
+    background-color: purple;
+    border-radius: 25px;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.chatuserprofile .dp{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chattingbox .chatuserprofile .dp img{
+
+    height: 55px;
+    border-radius: 50%;
+    
+} 
+
+
+.chatting .inputandsendbtn{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+
+}
+
+.inputandsendbtn img{
+    height: 35px;
+}
+
+.inputandsendbtn input{
+    padding: 10px;
+    height: 25px;
+    width: 90%;
+    border-radius: 25px;
+    border: 0.1px solid #ddd;
+    outline: none;
+}
+
+
+.contacts .userprofileinsidecontacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    width:90%; 
+    padding: 0px 10px 0px 10px; 
+}
+
+.contacts .userprofileinsidecontacts h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contacts .userprofileinsidecontacts img{
+    height: 24px;
+}
+
+
+.chatting .contacts{
+    overflow-y: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+    height: 90%;
+    width: 30%;
+   border-right: 0.1px solid #ddd;
+}
+
+.contacts .contact .nameandtypingstatus{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    padding-top: 4px;
+    align-items: left;
+    width: auto;
+    flex-direction: column;
+    height: 90%;
+
+    
+}
