@@ -353,7 +353,7 @@ function UserDetailsProfile(props) {
                     console.log(data.data)
                     setsearchresult(prev => [...prev, data.data])
 
-                    changelogindata({name:data.data.name,fullname:data.data.fullname,userId:data.data.userId,email:data.data.email,userprofile:data.data.userprofile})
+                    //changelogindata({name:data.data.name,fullname:data.data.fullname,userId:data.data.userId,email:data.data.email,userprofile:data.data.userprofile})
                     
       
                   }
