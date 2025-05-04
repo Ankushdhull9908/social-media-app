@@ -14,7 +14,7 @@ function UserDetailsProfile(props) {
       const navigate = useNavigate()
       const [searchresult, setsearchresult] = useState([])
     const [loading,setloading] = useState(true)
-    const [profilepicchanges,setprofilepicchanges] = useState(false)
+    //const [profilepicchanges,setprofilepicchanges] = useState(false)
       
       const [userfolowers, setuserfollowers] = useState([])
       const [userfolowees, setuserfollowees] = useState([])
@@ -328,7 +328,7 @@ function UserDetailsProfile(props) {
         sendData();
       }, [userdplink]);
 
-    useEffect(()=>{
+  /*  useEffect(()=>{
         if(name)
           {
       
@@ -368,7 +368,7 @@ function UserDetailsProfile(props) {
                 });
             }
 
-      },[profilepicchanges])
+      },[profilepicchanges])*/
       
       return (
         <div className="userdetails">
