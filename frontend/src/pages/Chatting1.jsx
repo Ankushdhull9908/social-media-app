@@ -205,9 +205,9 @@ useEffect(() => {
                loading===false ?  chatwithfollowers.map((i,index)=>{
                     return(
                         <div key={index} className='contact' onClick={()=> {setreceiver(i.Uname)
-                            setreceiverimg(i.userprofile)
+                            setreceiverimg(i.userprofile==="empty" ? asstes.noprofile : i.userprofile)
                         }}>
-                            <img src={i.userprofile} alt='receiverimg' onClick={()=> {setreceiverimg(i.userprofile==="empty" ? asstes.noprofile : i.userprofile)
+                            <img src={i.userprofile==="empty" ? asstes.noprofile : i.userprofile} alt='receiverimg' onClick={()=> {setreceiverimg(i.userprofile==="empty" ? asstes.noprofile : i.userprofile)
                                 setreceiver(i.Uname)}
                             }/>
                             <div className="nameandtypingstatus">
