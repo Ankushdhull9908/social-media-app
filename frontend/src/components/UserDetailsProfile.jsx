@@ -318,7 +318,7 @@ function UserDetailsProfile(props) {
             const result = await response.json();
             console.log('Success:', result);
 
-              setprofilepicchanges(true)
+            //  setprofilepicchanges(true)
             //setfetchdata(true);
           } catch (error) {
             console.error('Error:', error);
