@@ -376,7 +376,7 @@ function UserDetailsProfile(props) {
                 searchresult[0].name === logindata.name ? (
                   <div className="profileimgandotherdetails">
                     <div className="profilepic">
-                      <img src={searchresult[0].userprofile==="empty" ? asstes.noprofle : searchresult[0].userprofile} alt="profilepic" onClick={handleClick} />
+                      <img src={searchresult[0].userprofile==="empty" ? asstes.noprofile : searchresult[0].userprofile} alt="profilepic" onClick={handleClick} />
                       <input
                         type="file"
                         ref={fileInputRef}
