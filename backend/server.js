@@ -131,6 +131,18 @@ app.post('/givelike/:postid',async (req,res)=>{
   }
 })
 
+app.get('/suggest', async (req, res) => {
+  console.log('suggestion runned')
+  try {
+    const users = await signupmodel.find();
+    console.log("Suggestion accounts fetched:", users);
+    res.status(200).json(users); // Send success status
+  } catch (error) {
+    console.error("Error fetching suggestions:", error);
+    res.status(500).json({ message: "Failed to fetch suggestion accounts", error });
+  }
+});
+
 
 app.post('/allpost/:name',async (req,res)=>{
 
