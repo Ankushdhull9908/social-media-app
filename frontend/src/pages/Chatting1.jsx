@@ -201,7 +201,7 @@ useEffect(() => {
             </div>
 
             {
-               loading===false ?  chatwithfollowers.map((i,index)=>{
+               
                loading===false ?  chatwithfollowers.map((i,index)=>{
                     return(
                         <div key={index} className='contact' onClick={()=> {setreceiver(i.Uname)
@@ -221,7 +221,7 @@ useEffect(() => {
                         </div>
                     )
                  }) : <p>Loading Contacts....</p>
-                 }) : <p>Loading Contacts....</p>
+                 
             }
 
           </div>
