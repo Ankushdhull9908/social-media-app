@@ -113,12 +113,7 @@ function SignUpForm() {
 <input type='password' placeholder='password' value={password} onChange={(e)=> setpassword(e.target.value)}/>
 <input type='text' placeholder='Full Name' value={fullname} onChange={(e)=> setfullname(e.target.value) }/>
 <input type='text' placeholder='User Name' value={username} onChange={(e)=> setusername(e.target.value)}/>
-<input
-     type="file"
-     ref={fileInputRef}
-     onChange={handleFileChange}
-     accept="image/*"
-/>
+
 <button onClick={()=> submit()}>Sign Up</button>
 
 
