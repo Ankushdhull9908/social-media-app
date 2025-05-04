@@ -40,7 +40,7 @@ function LoginForm() {
 
                 sucessfulllogin()
 
-                const profileImage = data.data.userprofile === "empty" ? asstes.noprofle : data.data.userprofile;
+                const profileImage = data.data.userprofile === "empty" ? asstes.noprofile : data.data.userprofile;
 
                 setTimeout(() => {
                   localStorage.setItem('userdata',JSON.stringify(data.data))
