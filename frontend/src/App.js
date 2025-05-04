@@ -15,6 +15,7 @@ import Following from './pages/Following.jsx';
 import PostDetails from './pages/PostDetails.jsx';
 import ReelsDetails from './pages/ReelsDetails.jsx';
 import CreatePost from './pages/CreatePost.jsx';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -27,6 +28,12 @@ function App() {
   
   return (
     <div className="App">
+    <ToastContainer position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover/>
 
       {
         logindata.name ===null || logindata.name==="" ? '':<NavBar/> 
