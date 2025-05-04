@@ -53,6 +53,11 @@ function SignUpForm() {
               Errorduringsignup()
             }else{
               sucessfullsignup()
+
+              setemail('');
+            setfullname('');
+            setusername('');
+            setpassword('');
             }
             
         })
