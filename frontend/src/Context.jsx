@@ -14,7 +14,7 @@ export const AppContext= (props) => {
 
     
      console.log('all friend request are',allfriendrequest)
-     
+     console.log('login data',logindata);
     
     useEffect(() => {
       const userData = JSON.parse(localStorage.getItem('userdata'));
