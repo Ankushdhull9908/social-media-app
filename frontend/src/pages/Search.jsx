@@ -71,7 +71,7 @@ function Search() {
                searchresult.map((item, index) => {
                    return (
                        <div className="searchitem" key={index}>
-                           <img src={item.userprofile} alt='profilepic' onClick={()=> navigate(`/profile/${item.name}`)}/>
+                           <img src={item.userprofile==="empty" ? asstes.noprofile :item.userprofile} alt='profilepic' onClick={()=> navigate(`/profile/${item.name}`)}/>
                            <div className="usernameandfullname">
                            <h4>{item.name}</h4>
                            <p>{item.fullname}</p>
