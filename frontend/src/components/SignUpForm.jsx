@@ -31,7 +31,7 @@ function SignUpForm() {
       fullname:fullname,
       username:username,
       password:password,
-      userprofile:userdplink
+      userprofile:"empty"
     }
     
 
