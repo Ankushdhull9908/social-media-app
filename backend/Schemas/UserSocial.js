@@ -13,7 +13,7 @@ const FollowerStructure = new mongoose.Schema({
     },
     userprofile:{
         type:String,
-        required:true
+        required:false
 
     },
     uFullname:{
