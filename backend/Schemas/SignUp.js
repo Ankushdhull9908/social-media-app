@@ -8,7 +8,7 @@ export const signup = new mongoose.Schema({
     },
     userprofile:{
         type:String,
-        required:true
+        required:false
 
     },
     email: {
