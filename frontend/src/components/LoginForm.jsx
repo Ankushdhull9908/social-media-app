@@ -39,6 +39,8 @@ function LoginForm() {
             {
 
                 sucessfulllogin()
+                setusername('')
+                setpassword('')
 
                 const profileImage = data.data.userprofile === "empty" ? asstes.noprofile : data.data.userprofile;
 
