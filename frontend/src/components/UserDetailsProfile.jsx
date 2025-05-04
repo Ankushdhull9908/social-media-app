@@ -14,6 +14,7 @@ function UserDetailsProfile(props) {
       const navigate = useNavigate()
       const [searchresult, setsearchresult] = useState([])
     const [loading,setloading] = useState(true)
+    const [profilepicchanges,setprofilepicchanges] = useState(false)
       
       const [userfolowers, setuserfollowers] = useState([])
       const [userfolowees, setuserfollowees] = useState([])
@@ -324,6 +325,48 @@ function UserDetailsProfile(props) {
       
         sendData();
       }, [userdplink]);
+
+    useEffect(()=>{
+        if(name)
+          {
+      
+            submitdata()
+          }
+          
+            
+            async function submitdata() {
+              await fetch(`http://localhost:8080/search/${name}`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+              search: name
+            })
+              })
+                .then(response => response.json())
+                .then(data => {
+  
+                  if (data.data !== undefined) {
+                    console.log(data.data)
+                    setsearchresult(prev => [...prev, data.data])
+
+                    changelogindata({name:data.data.name,fullname:data.data.fullname,userId:data.data.userId,email:data.data.email,userprofile:data.data.userprofile})
+                    
+      
+                  }
+                  else {
+                    alert('Invalid credentials')
+                  }
+      
+                  console.log('Success:', data);
+                })
+                .catch((error) => {
+                  console.error('Error:', error);
+                });
+            }
+
+      },[profilepicchanges])
       
       return (
         <div className="userdetails">
@@ -333,7 +376,7 @@ function UserDetailsProfile(props) {
                 searchresult[0].name === logindata.name ? (
                   <div className="profileimgandotherdetails">
                     <div className="profilepic">
-                      <img src={searchresult[0].userprofile} alt="profilepic" onClick={handleClick} />
+                      <img src={searchresult[0].userprofile==="empty" ? asstes.noprofle : searchresult[0].userprofile} alt="profilepic" onClick={handleClick} />
                       <input
                         type="file"
                         ref={fileInputRef}
@@ -390,7 +433,7 @@ function UserDetailsProfile(props) {
                 ) : (
                   <div className="profileimgandotherdetails">
                     <div className="profilepic">
-                      <img src={searchresult[0].userprofile} alt="profile" />
+                      <img src={searchresult[0].userprofile==="empty" ? asstes.noprofile : searchresult[0].userprofile} alt="profile" />
                     </div>
       
                     <div className="userdetailsbox">
