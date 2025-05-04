@@ -39,17 +39,18 @@
 }
 
 .suggestions .suggestionbox{
-    font-family:'Times New Roman', Times, serif;
+    
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 280px;
+    height: 230px;
     margin: 10px 20px 10px 0px;
     width: 200px;
     border: 0.1px solid #ddd;
     padding-top: 10px;
+    border-radius: 10px;
 }
 
 .suggestions .suggestionbox button{
@@ -57,12 +58,17 @@
     width: 100%;
     border: none;
     border-top: 0.1px solid #ddd;
-    
+    font-size: 15px;
     outline: none;
     background: transparent;
-    color: blue;
-    font-weight: 500;
+    color: #487de6;
+    font-weight: 600;
     font-style: bold;
+    cursor: pointer;
+}
+
+.suggestions .suggestionbox button:hover{
+    color: #1f63e9;
 }
 
 .suggestions .suggestionbox .nameandverified{
@@ -90,4 +96,8 @@
     height: 100%;
     width: 100%;
     border-radius: 5px;
+}
+
+.suggestionbox p{
+    font-size: 14px;
 }
