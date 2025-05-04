@@ -1,5 +1,6 @@
 import { createContext,useContext,useState,useEffect} from "react";
 import { io } from 'socket.io-client'
+import { toast } from "react-toastify";
 const Context = createContext();
 
 export const AppContext= (props) => {
@@ -40,7 +41,8 @@ export const AppContext= (props) => {
       const handleFriendRequest = (message) => {
           setTimeout(() => {
               console.log(message);
-              alert(`${message.from} Started following you`);
+              
+              toast(`${message.from} Started following you`)
           }, 1000);
       };
   
@@ -70,9 +72,10 @@ export const AppContext= (props) => {
           const updated = [...allfriendrequest, message];
           setallfriendrequest(updated);
           localStorage.setItem('friendrequests', JSON.stringify(updated));
-          alert(`${message.from} requested to Follow you`);
+            toast(`${message.from} requested to Follow you`)
+          
         } else {
-          alert('Already sent request');
+          toast('Already Sent Request');
         }
       }, 1000);
     };
@@ -92,7 +95,8 @@ export const AppContext= (props) => {
 
         socket.on('requestaccepted',(data)=>{
           console.log(data)
-          alert(`${data.from}`+" accepted ur request")
+            toast(`${data.from}`+" accepted ur request");
+          
         })
 
         return () => {
@@ -172,7 +176,8 @@ export const AppContext= (props) => {
   
             }
             else {
-              alert('Invalid credentials')
+                toast('Invalid credentials');
+              
             }
   
             console.log('Success:', data);
