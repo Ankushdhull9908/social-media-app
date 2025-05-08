@@ -105,6 +105,12 @@
 
 }
 
+@media screen  and (max-width:380px){
+    .rightprofilesection{
+        display: none;
+    }
+    
+}
 
 
 
