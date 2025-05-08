@@ -23,7 +23,7 @@ function Chatting() {
   const [loading,setloading]= useState(true)
   const username = logindata.name;
   const navigate = useNavigate()
-
+  const [isMobile, setIsMobile] = useState(false);
   console.log('receiver image',receiverimg)
 
   console.log('chat withothers',chatwithfollowers)
@@ -35,12 +35,21 @@ function Chatting() {
 
   console.log('receiver is',receiver)
 
+useEffect(() => {
+    // Function to check screen width
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
 
- 
- 
+    // Initial check
+    checkScreenSize();
 
-  
+    // Add resize listener
+    window.addEventListener('resize', checkScreenSize);
 
+    // Clean up the event listener on unmount
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   console.log(msgcollection)
 
@@ -185,9 +194,13 @@ useEffect(() => {
     };
 }, [socket]);
 
-  function toggle()
+function toggle()
 {
-    showcontactstoggle===true ? setshowcontactstoggle(false) : setshowcontactstoggle(true)
+    if(isMobile)
+    {
+        showcontactstoggle===true ? setshowcontactstoggle(false) : setshowcontactstoggle(true)
+    }
+    
 }
 
 
@@ -232,9 +245,9 @@ useEffect(() => {
           </div>
           {
 
-            receiver === "" ? <div className='emptychattingbox'><img src={asstes.messages} alt='chaticon'/><p>Send private photos and messages to a friend</p><button>Send Message</button></div> : <div className={showcontactstoggle===false? "chattingbox": "hidechattingbox"}>
+            receiver === "" ? <div className={!isMobile?'emptychattingbox': 'hidecontacts'}><img src={asstes.messages} alt='chaticon'/><p>Send private photos and messages to a friend</p><button>Send Message</button></div> : <div className={isMobile ? (isMobile && showcontactstoggle===false? "chattingbox": "hidechattingbox"): 'chattingbox'}>
             <div className="chatuserprofile">
-            <div className={showcontactstoggle===false ? '.showbackbtn': ''}>
+            <div className={isMobile? (showcontactstoggle===false ? 'showbackbtn': 'hidebackkbtn'):'hidebackkbtn'}>
                         <img src={asstes.back} onClick={()=> setshowcontactstoggle(true)} id='backbtn'/>
                         </div>
                 <div className="dpnameverified">
