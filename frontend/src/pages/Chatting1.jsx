@@ -247,9 +247,13 @@ function toggle()
 
             receiver === "" ? <div className={!isMobile?'emptychattingbox': 'hidecontacts'}><img src={asstes.messages} alt='chaticon'/><p>Send private photos and messages to a friend</p><button>Send Message</button></div> : <div className={isMobile ? (isMobile && showcontactstoggle===false? "chattingbox": "hidechattingbox"): 'chattingbox'}>
             <div className="chatuserprofile">
-            <div className={isMobile? (showcontactstoggle===false ? 'showbackbtn': 'hidebackkbtn'):'hidebackkbtn'}>
+              {
+
+                isMobile? <div className={isMobile? (showcontactstoggle===false ? 'showbackbtn': 'hidebackkbtn'):'hidebackkbtn'}>
                         <img src={asstes.back} onClick={()=> setshowcontactstoggle(true)} id='backbtn'/>
-                        </div>
+                        </div> : ''
+              }
+            
                 <div className="dpnameverified">
                 
                 <div className="dp">
