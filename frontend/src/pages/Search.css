@@ -88,3 +88,13 @@
     width: 100%;
 
 }
+
+@media screen and (max-width:480px) {
+    .search input{
+        height: 35px;
+        width: 320px;
+        
+    } 
+
+    
+}
