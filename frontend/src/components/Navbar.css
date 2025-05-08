@@ -100,3 +100,51 @@
     height: 100%;
     width: 100%;
 }
+
+
+@media screen and (max-width: 380px) {
+
+    .navbar{
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        height: 8%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      
+    }
+
+    .navbar ul{
+        margin-left: 0px;
+        gap: 10px;
+        flex-direction: row;
+    }
+
+    .navbar ul .element li{
+        display: none;
+    }
+
+    .navbar .logo{
+        display: none;
+    }
+
+    .navbar ul .userprofile p{
+        display: none;
+    }
+    .navbar .element p{
+        display: none;
+    }
+
+    .navbar .element img{
+        height: 26px;
+        width: auto;
+    }
+
+
+
+    
+    
+}
