@@ -103,5 +103,14 @@
     color: grey;
 }
 
+@media screen and (max-width: 380px) {
+
+    .loginpage .loginimage{
+        display: none;
+    }
+    
+    
+}
+
 
 
