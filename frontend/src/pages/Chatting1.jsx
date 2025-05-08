@@ -14,7 +14,7 @@ function Chatting() {
   const [chatwithfollowers,setchatwithfollowers] = useState([])
   const [receiverimg,setreceiverimg] = useState('')
   const [targetedid,settargetedid] = useState([])
-
+    const [showcontactstoggle,setshowcontactstoggle] = useState(true)
   const [receiver,setreceiver] = useState('')
   const [typing,settyping] = useState('')
   const {logindata,socket,isConnected} = useCart()
@@ -185,12 +185,16 @@ useEffect(() => {
     };
 }, [socket]);
 
+  function toggle()
+{
+    showcontactstoggle===true ? setshowcontactstoggle(false) : setshowcontactstoggle(true)
+}
 
 
 
   return (
       <div className="chatting">
-          <div className="contacts">
+          <div className={showcontactstoggle===true?"contacts":"hidecontacts"}>
             <div className="userprofileinsidecontacts">
                 <h3>{logindata.name}</h3>
                 <img src={asstes.write} alt='setting'/>
@@ -206,6 +210,7 @@ useEffect(() => {
                     return(
                         <div key={index} className='contact' onClick={()=> {setreceiver(i.Uname)
                             setreceiverimg(i.userprofile==="empty" ? asstes.noprofile : i.userprofile)
+                            toggle()
                         }}>
                             <img src={i.userprofile==="empty" ? asstes.noprofile : i.userprofile} alt='receiverimg' onClick={()=> {setreceiverimg(i.userprofile==="empty" ? asstes.noprofile : i.userprofile)
                                 setreceiver(i.Uname)}
@@ -220,17 +225,23 @@ useEffect(() => {
                             
                         </div>
                     )
+                
                  }) : <p>Loading Contacts....</p>
-                 
             }
 
           </div>
           {
 
-            receiver === "" ? <div className='emptychattingbox'><img src={asstes.messages} alt='chaticon'/><p>Send private photos and messages to a friend</p><button>Send Message</button></div> : <div className="chattingbox">
+            receiver === "" ? <div className='emptychattingbox'><img src={asstes.messages} alt='chaticon'/><p>Send private photos and messages to a friend</p><button>Send Message</button></div> : <div className={showcontactstoggle===false? "chattingbox": "hidechattingbox"}>
             <div className="chatuserprofile">
+            <div className={showcontactstoggle===false ? '.showbackbtn': ''}>
+                        <img src={asstes.back} onClick={()=> setshowcontactstoggle(true)} id='backbtn'/>
+                        </div>
                 <div className="dpnameverified">
+                
                 <div className="dp">
+                    
+                    
                 <img src={receiverimg} alt='profilepic' onClick={()=> navigate(`/profile/${receiver}`)}/>
                 
                 </div>
