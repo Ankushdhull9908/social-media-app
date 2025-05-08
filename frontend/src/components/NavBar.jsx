@@ -52,8 +52,8 @@ function NavBar() {
 
             </div>
 
-            <div className="userprofile">
-                <img src={logindata.userprofile==="empty" ? asstes.noprofile : logindata.userprofile} alt='notifications'/>
+           <div className="userprofile">
+                <img  onClick={()=> navigate(`/profile/${logindata.name}`)}   src={logindata.userprofile==="empty" ? asstes.noprofile : logindata.userprofile} alt='notifications' />
                 <p onClick={()=> navigate(`/profile/${logindata.name}`)}>Profile</p>
 
             </div>
