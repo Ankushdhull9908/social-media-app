@@ -239,7 +239,6 @@
 .someonemsg img{
     height: 25px;
     border-radius: 50%;
-    width: 25px;
 }
 
 .chatbox .someonemsg p{
@@ -336,5 +335,86 @@
     flex-direction: column;
     height: 90%;
 
+    
+}
+
+#backbtn{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: 10px;
+    top: 18px;
+}
+
+.hidechattingbox{
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .chatting .contacts{
+        width: 100%;
+    }
+
+    .chatting .emptychattingbox{
+        display: none;
+    }
+
+    .hidecontacts{
+        display: none;
+    }
+
+    
+        .chatting .chattingbox{
+            height: 88%;
+
+        }
+    
+        .chatting{
+            
+            align-items: flex-start;
+        
+        
+        }
+
+        .chattingbox .inputandsendbtn input{
+            height: 100%;
+            
+        }
+
+
+
+        .chatting .inputandsendbtn{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            height: 5%;
+            width: 100%;
+           
+        
+        }
+        
+        .inputandsendbtn img{
+            height: 35px;
+        }
+        
+        .inputandsendbtn input{
+            padding: 4px;
+            height: 100%;
+            width: 90%;
+            border-radius: 10px;
+            border: 0.1px solid #ddd;
+            outline: none;
+        }
+
+        .showbackbtn{
+            display: block;
+        }
+
+        .chatuserprofile .dpnameverified{
+            margin-left: 30px;
+        }
+
+    
     
 }
