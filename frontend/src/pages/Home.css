@@ -21,3 +21,14 @@
     height: 100%;
     
 }
+
+@media screen and (max-width:480px)
+{
+   .main{
+    width: 100%;
+   }
+
+   .profileandsuggestions{
+    display: none;
+   }
+}
