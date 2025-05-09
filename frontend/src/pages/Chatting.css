@@ -365,7 +365,7 @@
 
     
         .chatting .chattingbox{
-            height: 88%;
+            height: 85%;
 
         }
     
@@ -416,8 +416,45 @@
         }
 
         .chatuserprofile .dpnameverified{
+            
             margin-left: 30px;
         }
+
+        
+            .chattingbox .chatuserprofile{
+                
+                height: 8vh;
+              
+               
+            }
+
+            .chattingbox .chatuserprofile .dp img{
+
+                height: 35px;
+                width: 35px;  
+            } 
+
+            .chatbox .userprofileinsidechatbox{
+                margin: 20px 0px;
+            
+                height: 25%;
+                width: 50%;
+            
+            }
+
+            .chatbox .userprofileinsidechatbox img{
+                height: 55px;
+                width: 55px;
+            }
+
+            .chatbox .userprofileinsidechatbox button{
+                height: 30px;
+                width: 100px;
+            }
+            
+        
+
+        
 
     
     
