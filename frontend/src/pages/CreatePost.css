@@ -163,4 +163,25 @@
     width: 100%;
 }
 
+@media screen and (max-width:480px){
+    .createpost .selectfilesbox{
+
+        height: 80vh;
+        border-radius: 15px;
+        width: 80vw;
+         border: 0.1px solid #ddd;
+    }
+
+    .imageandbtns .btns{
+       margin: auto;
+       left: -60px;
+    
+
+    }
+
+    
+
+    
+}
+
 
