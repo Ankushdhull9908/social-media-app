@@ -40,12 +40,13 @@ import save from './save.png'
 import noprofile from './noprofile.jpg'
 import back from './back.png'
 import photosvideos from './photosvideos.png'
+import uploaded from './uploaded.gif';
 export const asstes = {
      instagram,
      noprofile,
      back,
      photosvideos,
-    
+     uploaded,
     
      commentlikeicon,
      share,
