@@ -131,6 +131,11 @@
         display: none;
     }
 
+    #more{
+      display:none;
+
+    }
+
     .navbar ul .userprofile p{
         display: none;
     }
