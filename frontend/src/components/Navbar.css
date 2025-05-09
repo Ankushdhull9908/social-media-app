@@ -136,6 +136,14 @@
       display:none;
 
     }
+    #explore{
+       display:none;
+
+    }
+
+    #reels{
+       display:none;
+    }
 
     .navbar ul .userprofile p{
         display: none;
