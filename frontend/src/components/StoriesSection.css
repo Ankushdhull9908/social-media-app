@@ -37,3 +37,22 @@
 .stories::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
+
+
+  @media screen and (max-width:480px){
+    .stories{
+       
+   
+    height: 15vh;
+    width: 80%;
+    
+    gap: 12px;
+    
+    
+    padding: 10px;
+    
+    font-size: 12px;
+    
+    }
+    
+}
