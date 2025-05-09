@@ -8,6 +8,7 @@ function CreatePost() {
   const { logindata, changelogindata, socket } = useCart()
   //const [posturl,setposturl] =useState(null)
   const [isMobile, setIsMobile] = useState(false);
+  const [createposttext,setcreateposttext] = useState('next')
   const fileInputRef = useRef(null);
 
   const handleClick = () => {
