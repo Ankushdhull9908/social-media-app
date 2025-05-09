@@ -188,11 +188,16 @@
 
 
 @media screen and (max-width:480px){
+
+    .createpost .createpostbox{
+        height: 65vh;
+        width: 90vw;
+    }
     .createpost .selectfilesbox{
 
         height: 60vh;
         border-radius: 15px;
-        width: 80vw;
+        width: 90vw;
          border: 0.1px solid #ddd;
     }
 
@@ -223,7 +228,7 @@
     }
 
     .createpostbox .heading h4{
-        top: 15px;
+        top: 10px;
         position: absolute;
         left: 10%;
        
@@ -242,6 +247,7 @@
         border: none;
         border-bottom: 0.1px solid #ddd;
         margin: 10px 0px;
+        width: 90%;
     }
 
     .userdplocationandpostbio input{
