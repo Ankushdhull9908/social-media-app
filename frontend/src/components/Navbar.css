@@ -109,12 +109,13 @@
         z-index: 1;
         bottom: 0;
         height: 5%;
-        width: 100vw;
+        width: 85vw;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: row;
         background-color: white;
+        border-right:none;
     }
 
     .navbar ul{
