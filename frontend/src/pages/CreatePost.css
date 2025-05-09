@@ -1,6 +1,6 @@
 .createpost{
-    height: 100vh;
-    width: 100%;
+    height: 90vh;
+    width: 100vw;
     
     display:flex;
     justify-content: center;
@@ -151,8 +151,6 @@
    
 }
 
-
-
 .createpostbox .createpostmainsection{
     display: flex;
     justify-content: center;
@@ -162,6 +160,32 @@
     border-radius: 15px;
     width: 100%;
 }
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.userdplocationandpostbio textarea{
+    padding: 2px;
+    outline: none;
+    border: none;
+    border-bottom: 0.1px solid #ddd;
+    margin: 10px 10px;
+}
+
+.userdplocationandpostbio input{
+    padding: 2px;
+    outline: none;
+    border: none;
+    border-bottom: 0.1px solid #ddd;
+    margin: 15px 10px;
+    width: 90%;
+}
+
 
 @media screen and (max-width:480px){
     .createpost .selectfilesbox{
@@ -179,11 +203,68 @@
 
     }
 
+    .createpostmainsection .createpostimg{
+        width: 100%;
+    }
+
+    .createpostmainsection .userdplocationandpostbio{
+        padding-top: 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .createpostmainsection .userdplocationandpostbio img{
+        height: 150px;
+        width: 150px;
+        border-radius: 5px;
+        margin: auto;
+    }
+
+    .createpostbox .heading h4{
+        top: 15px;
+        position: absolute;
+        left: 10%;
+       
+    }
+
+    .createpostbox .heading img{
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        top: 17px;
+    }
+
+    .userdplocationandpostbio textarea{
+        padding: 2px;
+        outline: none;
+        border: none;
+        border-bottom: 0.1px solid #ddd;
+        margin: 10px 0px;
+    }
+
+    .userdplocationandpostbio input{
+        padding: 2px;
+        outline: none;
+        border: none;
+        border-bottom: 0.1px solid #ddd;
+        margin: 10px 0px;
+        width: 90%;
+    }
+    
+
+    
+
     
 
     
 
     
 }
+
+
+
+
 
 
