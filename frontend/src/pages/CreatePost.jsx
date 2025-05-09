@@ -10,7 +10,7 @@ function CreatePost() {
   const [isMobile, setIsMobile] = useState(false);
   const [createposttext,setcreateposttext] = useState('next')
   const fileInputRef = useRef(null);
-
+  const [postuploaded,setpostuploaded] = useState(false)
   const handleClick = () => {
     fileInputRef.current.click(); // trigger the hidden input
   };
@@ -91,7 +91,7 @@ function CreatePost() {
 
   return (
     <div className='createpost'>
-      {
+      { !postuploaded ? (
         userdplink === "" ? <div className='selectfilesbox'> <div className="heading"><h4>Create New Post</h4>
         </div>
         <div className="imageandbtns">
@@ -149,7 +149,11 @@ function CreatePost() {
         
         
         
-      }
+      ) : <div className='postuploaded'>
+        <h3>Uploaded SuccessFully</h3>
+      <img src={asstes.uploaded}/>
+        
+        </div>}
 
 
 
