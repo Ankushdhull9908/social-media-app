@@ -3,7 +3,9 @@ import { useCart } from '../Context'
 import './CreatePost.css'
 import { asstes } from '../assets/assets';
 
+import { useNavigate } from 'react-router-dom';
 function CreatePost() {
+  const navigate = useNavigate()
   const [userdplink, setuserdplink] = useState('')
   const { logindata, changelogindata, socket } = useCart()
   //const [posturl,setposturl] =useState(null)
@@ -75,7 +77,12 @@ function CreatePost() {
 
         const result = await response.json();
         console.log('Success:', result);
-        //setfetchdata(true);
+        setpostuploaded(true)
+
+        setTimeout(()=>{
+          navigate('/home')
+
+        },2000)
       } catch (error) {
         console.error('Error:', error);
       }
