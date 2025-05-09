@@ -401,13 +401,22 @@ border-radius: 50%;
         
         }
 
-    .useruploads .allpostcolletions .post{
+     .useruploads{
+           
+            width: 85%;
+            background-color: red;
+            
+          
+        }
+
+        .useruploads .allpostcolletions .post{
             height: 140px;
             width: 100px;
             flex-shrink: 0;
-            margin: 4px 2px 2px 2px;
+            margin: 4px 0px 2px 2px;
 
         }
+
 
     
 
