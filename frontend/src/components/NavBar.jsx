@@ -60,7 +60,7 @@ function NavBar() {
             
         </ul>
         
-        <div className="element">
+        <div className="element" id='more'>
                 <img src={asstes.more} alt='notifications'/>
             <p>More</p>
             </div>
