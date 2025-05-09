@@ -7,6 +7,7 @@ function CreatePost() {
   const [userdplink, setuserdplink] = useState('')
   const { logindata, changelogindata, socket } = useCart()
   //const [posturl,setposturl] =useState(null)
+  const [isMobile, setIsMobile] = useState(false);
   const fileInputRef = useRef(null);
 
   const handleClick = () => {
@@ -38,6 +39,18 @@ function CreatePost() {
     }
   };
 
+  useEffect(() => {
+   
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   async function uploadnewPost() {
 
@@ -101,14 +114,27 @@ function CreatePost() {
 
         <div className="createpostbox">
           <div className="heading">
+            {
+              isMobile && createposttext==='share' ? <img src={asstes.back} onClick={()=>setcreateposttext('next')}/> : ''
+             
+            }
+           
             <h4>Create New Post</h4>
-          <button onClick={() => uploadnewPost()}>share</button>
+          <button onClick={() => isMobile===true ? (createposttext==='next'? setcreateposttext('share'): uploadnewPost()) : uploadnewPost()}>
+              {isMobile=== true ? createposttext : 'share'}
+          </button>
           </div>
           <div className="createpostmainsection">
-          <div className="createpostimg">
+          <div className={isMobile===true? (createposttext==='next' ? "createpostimg" : 'hide'): 'createpostimg'}>
             <img src={userdplink}/>
           </div>
-          <div className="userdplocationandpostbio">
+          <div className={isMobile===true ? (createposttext==='share' ? "userdplocationandpostbio" : 'hide'): 'userdplocationandpostbio'}>
+            {
+              isMobile ? <img src={userdplink}/> : ''
+            }
+            
+            <textarea placeholder='Post Bio...' rows={8} cols={isMobile? 30 : 53}></textarea>
+            <input type='text'placeholder='Location'/>
           
 
           </div>
