@@ -26,12 +26,12 @@ function NavBar() {
             <li>Search</li>
 
             </div>
-            <div className="element">
+            <div className="element" id='explore'>
                 <img src={asstes.explore} alt='explore'/>
             <li>Explore</li>
 
             </div>
-            <div className="element">
+            <div className="element" id='reels'>
                 <img src={asstes.reels} alt='reels'/>
             <li>Reels</li>
 
