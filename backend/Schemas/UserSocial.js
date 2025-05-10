@@ -11,6 +11,7 @@ const FollowerStructure = new mongoose.Schema({
         type: String,
         required: true,
         
+        
     },
     userprofile:{
         type:String,
@@ -39,6 +40,7 @@ export const userSocialSchema = new mongoose.Schema({
     Uname: {
         type: String,
         required: true,
+        unique:true
         
     },
     AccountType: {
