@@ -16,6 +16,35 @@ export const AppContext= (props) => {
     
      console.log('all friend request are',allfriendrequest)
      console.log('login data',logindata);
+
+    function calculatetime(postdate)
+   {
+    const historicdata = new Date(postdate);
+    const now = new Date();
+    const diffInMs = now - historicdata;
+    const diffInSeconds = Math.floor(diffInMs / 1000);
+    
+    if(diffInSeconds >=31536000)
+    {
+      return (Math.floor(diffInSeconds/31536000)+`Year ago`)
+    }else if(diffInSeconds >=2592000)
+    {
+      return (Math.floor(diffInSeconds/2592000)+`Month ago`)
+    }else if(diffInSeconds >=604800)
+    {
+      return (Math.floor(diffInSeconds/604800)+`Week ago`)
+    }else if(diffInSeconds >=86400)
+    {
+      return (Math.floor(diffInSeconds/86400)+`day ago`)
+    }else if(diffInSeconds >=3600)
+    {
+      return (Math.floor(diffInSeconds/3600)+`hour ago`)
+    }else if(diffInSeconds >=60)
+      {
+        return (Math.floor(diffInSeconds/60)+`min ago`)
+      }else{
+        return ('just Now') }
+   }
     
     useEffect(() => {
       const userData = JSON.parse(localStorage.getItem('userdata'));
@@ -199,7 +228,7 @@ export const AppContext= (props) => {
 
    
     return (
-        <Context.Provider value={{logindata,changelogindata,socket,isConnected,myfollowees,allfriendrequest,setallfriendrequest,setlogindata}}>
+        <Context.Provider value={{calculatetime,logindata,changelogindata,socket,isConnected,myfollowees,allfriendrequest,setallfriendrequest,setlogindata}}>
 
             {props.children}
         </Context.Provider>
