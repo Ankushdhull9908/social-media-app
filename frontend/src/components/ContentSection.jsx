@@ -7,7 +7,7 @@ import { useCart } from '../Context';
 
 function ContentSection() {
    const navigate = useNavigate()
-  const { myfollowees,logindata } = useCart();
+  const { myfollowees,logindata,calculatetime } = useCart();
   var x = []
   const [allpostcollection,setallpostcollections]= useState([])
   const [backenddata, setbackenddata] = useState([]);
@@ -137,7 +137,7 @@ function ContentSection() {
               allpostcollection.map((i, index) => {
                 var x = i.likes.filter((y=> y.uFullName=== logindata.fullname))
 
-                
+                var time = calculatetime(i.createdAt)
                 return(
 
                 <div className='post' key={index}>
@@ -147,6 +147,7 @@ function ContentSection() {
                                   <img src={i.userProfile==="empty" ? asstes.noprofile : i.userProfile} onClick={()=> navigate(`/profile/${i.username}`)}/>
                               </div>
                               <h5 onClick={()=> navigate(`/profile/${i.username}`)}>{i.username}</h5>
+                               <p id='time'>{time}</p>
                               </div>
                   <img src={i.imgurl} alt="post" />
                   <div className="totalnooflikesonpost">
