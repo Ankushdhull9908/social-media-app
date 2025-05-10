@@ -10,7 +10,7 @@ const FollowerStructure = new mongoose.Schema({
     Uname: {
         type: String,
         required: true,
-        unique:true,
+        
     },
     userprofile:{
         type:String,
