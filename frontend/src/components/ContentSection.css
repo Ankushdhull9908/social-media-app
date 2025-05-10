@@ -109,5 +109,25 @@
     margin: 0px 0px 20px 0px;
     border-radius: 5px;
     }
+
+    .allpostmainpage .post img{
+        height: 80%;
+    width: 100%;
+   
+    }
+
+    .allpostmainpage .post .postaccount{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        height: 35px;
+        width: 100%;
+    }
+
+    .allpostmainpage .post .postaccount img{
+        height: 32px;
+        width: 32px;
+    }
     
 }
