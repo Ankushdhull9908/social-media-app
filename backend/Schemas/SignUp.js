@@ -4,7 +4,7 @@ export const signup = new mongoose.Schema({
     userId: {
         type: String,
         required: true,
-        unique: true,
+        
     },
     userprofile:{
         type:String,
