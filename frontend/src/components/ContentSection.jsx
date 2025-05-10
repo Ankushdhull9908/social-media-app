@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { asstes } from '../assets/assets';
 import { useCart } from '../Context';
 //import { allpostcollection } from '../assets/Posts';
-const [allpostcollection,setallpostcollections]= useState([])
+
 function ContentSection() {
    const navigate = useNavigate()
   const { myfollowees,logindata } = useCart();
   var x = []
-
+  const [allpostcollection,setallpostcollections]= useState([])
   const [backenddata, setbackenddata] = useState([]);
   const [suggestedaccount,setsuggestedaccount]  =useState([])
 
