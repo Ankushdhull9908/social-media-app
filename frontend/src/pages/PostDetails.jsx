@@ -128,7 +128,7 @@ function PostDetails() {
                 isMobile ? <div className="postaccount">
                     
                 <div className="postaccountdp">
-                <img src={postdetils[0].userProfile}/>
+                <img src={postdetils[0].userProfile==="empty" ? asstes.noprofile : postdetils[0].userProfile}/>
             </div>
             <h5>{postdetils[0].username}</h5>
             </div> : ''
@@ -164,7 +164,7 @@ function PostDetails() {
             <div className="postaccount">
                     
                     <div className="postaccountdp">
-                    <img src={postdetils[0].userProfile}/>
+                    <img src={postdetils[0].userProfile==="empty" ? asstes.noprofile : postdetils[0].userProfile}/>
                 </div>
                 <h4>{postdetils[0].username}</h4>
                 </div>
