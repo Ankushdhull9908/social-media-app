@@ -161,7 +161,7 @@ app.post('/allpost/:name',async (req,res)=>{
 
 app.get('/allpost',async (req,res)=>{
   try{
-    const data = await postmodel.find()
+    const data = await postmodel.find().sort({ createdAt: -1 }).limit(20)
     res.json({data})
 
   }catch(error)
