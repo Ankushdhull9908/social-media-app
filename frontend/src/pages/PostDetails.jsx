@@ -93,7 +93,38 @@ function PostDetails() {
         {
             postdetils.length===0 ? <p>loading</p> : <div className="mainbox">
             <div className="postimg">
+              {
+                isMobile ? <div className="postaccount">
+                    
+                <div className="postaccountdp">
+                <img src={postdetils[0].userProfile}/>
+            </div>
+            <h4>{postdetils[0].username}</h4>
+            </div> : ''
+              }
+            
                 <img src={postdetils[0].imgurl}/>
+                {
+                  isMobile ? <div className="totalnooflikesonpost">
+                  <div className="logocollections">
+                      <div className="likecommentsharelogo">
+                          <img src={asstes.commentlikeicon} onClick={()=>{
+                                 givelike()
+                          }}/>
+                          <img src={asstes.commentlogo}/>
+                          <img src={asstes.share}/>
+
+                      </div>
+                      <div className="savelogo">
+                      <img src={asstes.save}/>
+
+                      </div>
+                  </div>
+                  <div className="showtotallikesoncomment">
+                  <h4>{postdetils[0].likes.length } Likes</h4>
+                  </div>  
+                  </div> : ''
+                }
             </div>
             <div className="imgbioandcomments">
             <div className="postaccount">
