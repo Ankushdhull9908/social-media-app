@@ -29,7 +29,7 @@ export const userSocialSchema = new mongoose.Schema({
     userId: {
         type: String,
         required: true,
-        unique: true,
+        
     },
     userprofile:{
         type:String,
@@ -39,7 +39,7 @@ export const userSocialSchema = new mongoose.Schema({
     Uname: {
         type: String,
         required: true,
-        unique:true
+        
     },
     AccountType: {
         type: String,
