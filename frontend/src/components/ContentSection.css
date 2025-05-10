@@ -102,6 +102,27 @@
     font-size: 14px;
 }
 
+.allpostmainpage .post img{
+    height: 80%;
+width: 90%;
+
+
+}
+
+.allpostmainpage .post .postaccount{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 35px;
+    width: 100%;
+}
+
+.allpostmainpage .post .postaccount img{
+    height: 32px;
+    width: 32px;
+}
+
 @media screen and (max-width:480px){
     .allpostmainpage .post{
         height: 495px;
