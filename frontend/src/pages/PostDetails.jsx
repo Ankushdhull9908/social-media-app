@@ -10,8 +10,20 @@ function PostDetails() {
     const [isMobile,setisMobile] = useState(false)
     const {postid}=  useParams()
     const {logindata} =useCart()
+    const [postliked,setpostliked] = useState(false)
+    
 
     const finalpostid = parseInt(postid)
+
+    useEffect(()=>{
+
+      if(postdetils.length===0) return
+      const x= postdetils[0].likes.filter((i)=> i.uFullName=== logindata.fullname)
+                              if(x.length!==0){
+                                setpostliked(true)
+                              }
+
+    },[postdetils])
 
     useEffect(() => {
    
@@ -61,7 +73,11 @@ function PostDetails() {
                 console.error('Error:', error);
               });
           }
-          submitdata()
+          if(postliked===false)
+          {
+              submitdata()
+          }
+          
     }
   
 
@@ -104,7 +120,7 @@ function PostDetails() {
 
     
   return (
-    <div className='postdetails'>
+   <div className='postdetails'>
         {
             postdetils.length===0 ? <p>loading</p> : <div className="mainbox">
             <div className="postimg">
@@ -114,7 +130,7 @@ function PostDetails() {
                 <div className="postaccountdp">
                 <img src={postdetils[0].userProfile}/>
             </div>
-            <h4>{postdetils[0].username}</h4>
+            <h5>{postdetils[0].username}</h5>
             </div> : ''
               }
             
@@ -123,9 +139,12 @@ function PostDetails() {
                   isMobile ? <div className="totalnooflikesonpost">
                   <div className="logocollections">
                       <div className="likecommentsharelogo">
-                          <img src={asstes.commentlikeicon} onClick={()=>{
-                                 givelike()
-                          }}/>
+                        {
+                          postliked ? <img src={asstes.liked}/> : <img src={asstes.commentlikeicon} onClick={()=>{
+                            givelike()
+                     }}/>
+                        }
+                          
                           <img src={asstes.commentlogo}/>
                           <img src={asstes.share}/>
 
@@ -190,9 +209,11 @@ function PostDetails() {
                 <div className="totalnooflikesonpost">
                     <div className="logocollections">
                         <div className="likecommentsharelogo">
-                            <img src={asstes.commentlikeicon} onClick={()=>{
-                                   givelike()
-                            }}/>
+                        {
+                          postliked ? <img src={asstes.liked}/> : <img src={asstes.commentlikeicon} onClick={()=>{
+                            givelike()
+                     }}/>
+                        }
                             <img src={asstes.commentlogo}/>
                             <img src={asstes.share}/>
 
