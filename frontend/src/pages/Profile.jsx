@@ -34,41 +34,7 @@ function Profile() {
   const [postreelorsaved,setpostreelorsaved] = useState('post')
 
 
-  useEffect(()=>{
-
-    async function submitdata() {
-      await fetch(`https://social-media-app-0uma.onrender.com/allpost/${name}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-      search: name
-    })
-      })
-        .then(response => response.json())
-        .then(data => {
-
-          if (data.data) {
-            console.log("post data",data.data)
-
-            setuserpost(data.data)
-          }
-          else {
-            alert('Invalid credentials')
-          }
-
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-    }
-    submitdata()
-
-
-  },[name])
-
+  
   useEffect(()=>{
     
     settotalpost(userpost.length)
@@ -268,6 +234,42 @@ function Profile() {
 
     }
   }, [userfolowees])
+
+  useEffect(()=>{
+
+    async function submitdata() {
+      await fetch(`https://social-media-app-0uma.onrender.com/allpost/${name}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+      search: name
+    })
+      })
+        .then(response => response.json())
+        .then(data => {
+
+          if (data.data) {
+            console.log("post data",data.data)
+
+            setuserpost(data.data)
+          }
+          else {
+            alert('Invalid credentials')
+          }
+
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+    submitdata()
+
+
+  },[friendstatus])
+
 
 
   
