@@ -26,7 +26,7 @@ function Profile() {
   const [acctype,setacctype] = useState('public')
   const [showaccount,setshowaccount] = useState(true)
   const [classnameforsections,setclassnameforsections] = useState('active')
- 
+  const [getpostdata,setgetpostdata] = useState(false)
   const [userpost,setuserpost] = useState([])
   const [userreel,setuserreel] = useState([])
   const [totalpost,settotalpost] = useState(null)
@@ -109,6 +109,7 @@ function Profile() {
             setuserfollowers(data[0].Follower)
             setuserfollowees(data[0].Following)
             setfetchdata(false)
+            setgetpostdata(true)
             setacctype(data[0].AccountType)
             //setuserdplink(data[0].userprofile)
 
@@ -268,7 +269,7 @@ function Profile() {
     submitdata()
 
 
-  },[friendstatus])
+  },[getpostdata])
 
 
 
