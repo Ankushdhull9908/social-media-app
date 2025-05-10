@@ -5,7 +5,7 @@ const FollowerStructure = new mongoose.Schema({
     userId: {
         type: String,
         required: true,
-        unique: true,
+     
     },
     Uname: {
         type: String,
