@@ -3,8 +3,8 @@ import './ContentSection.css';
 import { useNavigate } from 'react-router-dom';
 import { asstes } from '../assets/assets';
 import { useCart } from '../Context';
-import { allpostcollection } from '../assets/Posts';
-
+//import { allpostcollection } from '../assets/Posts';
+const [allpostcollection,setallpostcollections]= useState([])
 function ContentSection() {
    const navigate = useNavigate()
   const { myfollowees,logindata } = useCart();
@@ -12,6 +12,23 @@ function ContentSection() {
 
   const [backenddata, setbackenddata] = useState([]);
   const [suggestedaccount,setsuggestedaccount]  =useState([])
+
+
+   useEffect(()=>{
+    async function fetchData() {
+      try {
+        const res = await fetch('http://localhost:8080/allpost');
+        const data = await res.json();
+        console.log("post data:", data); // For debugging
+        setallpostcollections(data.data)
+      } catch (error) {
+        console.error("Error fetching suggestions:", error);
+      }
+    }
+
+    fetchData()
+
+  },[])
 
   useEffect(() => {
      if(myfollowees.length!==0) return
