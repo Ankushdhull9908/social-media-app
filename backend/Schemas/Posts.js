@@ -87,6 +87,5 @@ export const postschema = new mongoose.Schema({
     Comments:{
         type:[commentschema],
         required:false
-    }
-,{timestamps: true})
+    },{timestamps: true})
 
