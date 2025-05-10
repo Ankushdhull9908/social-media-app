@@ -237,7 +237,7 @@ function Profile() {
   }, [userfolowees])
 
   useEffect(()=>{
-    if (getpostdata===false || userfolowers.length === 0) return;
+    //if (getpostdata===false || userfolowers.length === 0) return;
     async function submitdata() {
       await fetch(`https://social-media-app-0uma.onrender.com/allpost/${name}`, {
         method: 'POST',
@@ -269,7 +269,7 @@ function Profile() {
     submitdata()
 
 
-  },[getpostdata,userfolowers])
+  },[userfolowers])
 
 
 
