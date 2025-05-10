@@ -7,10 +7,25 @@ import { useCart } from '../Context'
 
 function PostDetails() {
     const [postdetils,setpostdetails]  =useState([])
+    const [isMobile,setisMobile] = useState(false)
     const {postid}=  useParams()
     const {logindata} =useCart()
 
     const finalpostid = parseInt(postid)
+
+    useEffect(() => {
+   
+      const checkScreenSize = () => {
+        setisMobile(window.innerWidth <= 480);
+      };
+  
+      checkScreenSize();
+  
+      window.addEventListener('resize', checkScreenSize);
+  
+      return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+    console.log(isMobile)
 
     async function givelike()
     {
