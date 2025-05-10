@@ -17,7 +17,7 @@ function ContentSection() {
    useEffect(()=>{
     async function fetchData() {
       try {
-        const res = await fetch('http://localhost:8080/allpost');
+        const res = await fetch('https://social-media-app-0uma.onrender.com/allpost');
         const data = await res.json();
         console.log("post data:", data); // For debugging
         setallpostcollections(data.data)
