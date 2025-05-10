@@ -159,6 +159,19 @@ app.post('/allpost/:name',async (req,res)=>{
 }
 )
 
+app.get('/allpost',async (req,res)=>{
+  try{
+    const data = await postmodel.find()
+    res.json({data})
+
+  }catch(error)
+  {
+    console.log(error)
+
+  }
+}
+)
+
 app.post('/specificpostdetails/:postid',async (req,res)=>{
 
   const {postid} = req.params
