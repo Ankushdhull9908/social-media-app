@@ -30,10 +30,48 @@ function ContentSection() {
 
   },[])
 
-   function givelike()
-  {
+   async function givelike(x)
+    {
+      
+        const data = {
+           
+            likeid:'121',
+            username:logindata.name,
+            userfullname:logindata.fullname,
+            userprofile:logindata.userprofile
 
-  }
+        }
+        async function submitdata() {
+          // alert('it called')
+            await fetch(`https://social-media-app-0uma.onrender.com/givelike/${x}`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            })
+              .then(response => response.json())
+              .then(data => {
+      
+                if (data) {
+                  console.log("post data",data)
+                }
+                else {
+                  alert('Invalid credentials')
+                }
+      
+                console.log('Success:', data);
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+              });
+          }
+
+          
+              submitdata()
+          
+          
+    }
 
   useEffect(() => {
      if(myfollowees.length!==0) return
@@ -115,9 +153,10 @@ function ContentSection() {
                                     <div className="logocollections">
                                         <div className="likecommentsharelogo">
                                           {
-                                            <img src={x.length===0 ? asstes.commentlikeicon : asstes.liked} onClick={()=>{
-                                              givelike()
-                                       }}/>
+                                            <img src={x.length===0 ? asstes.commentlikeicon : asstes.liked} onClick={()=> {
+                                               
+                                              if(x.length===0) givelike(i.postId)
+                                              }}/>
                                           }
                                             
                                             <img src={asstes.commentlogo}/>
