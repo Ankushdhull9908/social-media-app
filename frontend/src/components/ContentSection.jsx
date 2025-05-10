@@ -30,6 +30,11 @@ function ContentSection() {
 
   },[])
 
+   function givelike()
+  {
+
+  }
+
   useEffect(() => {
      if(myfollowees.length!==0) return
     async function fetchData() {
@@ -88,14 +93,48 @@ function ContentSection() {
             }
 
           </div>
-        ) : (
+        ) :(
           <div className='allpostmainpage'>
             {
-              allpostcollection.map((i, index) => (
+              allpostcollection.map((i, index) => {
+                var x = i.likes.filter((y=> y.uFullName=== logindata.fullname))
+
+                
+                return(
+
                 <div className='post' key={index}>
+                  <div className="postaccount">
+                                      
+                                  <div className="postaccountdp">
+                                  <img src={i.userProfile==="empty" ? asstes.noprofile : i.userProfile} onClick={()=> navigate(`/profile/${i.username}`)}/>
+                              </div>
+                              <h5 onClick={()=> navigate(`/profile/${i.username}`)}>{i.username}</h5>
+                              </div>
                   <img src={i.imgurl} alt="post" />
+                  <div className="totalnooflikesonpost">
+                                    <div className="logocollections">
+                                        <div className="likecommentsharelogo">
+                                          {
+                                            <img src={x.length===0 ? asstes.commentlikeicon : asstes.liked} onClick={()=>{
+                                              givelike()
+                                       }}/>
+                                          }
+                                            
+                                            <img src={asstes.commentlogo}/>
+                                            <img src={asstes.share}/>
+                  
+                                        </div>
+                                        <div className="savelogo">
+                                        <img src={asstes.save}/>
+                  
+                                        </div>
+                                    </div>
+                                    <div className="showtotallikesoncomment">
+                                    <h4>{i.likes.length} Likes</h4>
+                                    </div>  
+                                    </div>
                 </div>
-              ))
+              )})
             }
           </div>
         )
