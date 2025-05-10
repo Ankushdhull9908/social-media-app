@@ -14,6 +14,7 @@ function ContentSection() {
   const [suggestedaccount,setsuggestedaccount]  =useState([])
 
   useEffect(() => {
+     if(myfollowees.length!==0) return
     async function fetchData() {
       try {
         const res = await fetch('https://social-media-app-0uma.onrender.com/suggest');
@@ -32,9 +33,13 @@ function ContentSection() {
         console.error("Error fetching suggestions:", error);
       }
     }
+     if(myfollowees.length===0)
+    {
+      fetchData();
+    }
 
-    fetchData();
-  }, []);
+    
+  }, [myfollowees]);
 
   useEffect(()=>{
     var x = backenddata.filter((i)=> i.username!==logindata.name)
