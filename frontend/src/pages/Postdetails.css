@@ -252,3 +252,64 @@
     flex-direction: column;
     gap: 10px;
 }
+
+
+@media screen and (max-width:480px){
+    .postdetails{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;   
+    }
+    
+    .postdetails .mainbox{
+        top: 30px;
+        position: absolute;
+        height: 85%;
+        margin: auto;
+        width: 78%;
+
+    }
+
+    .mainbox .imgbioandcomments{
+        display: none;
+    }
+
+    .mainbox .postimg{
+        width: 100%;
+    }
+
+    .postimg img{
+        height: 80%;
+        width: 100%;
+    }
+
+    .postdetails .mainbox{
+        height: 80%;
+        
+        width: 75%; 
+        
+    }
+
+    .postimg .postaccount {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5px;
+        height: 30px;
+        width:90%;
+        flex-direction: row;
+        
+    }
+
+    .postimg .postaccount img{
+        
+        height: 25px;
+        width:25px;
+        
+    }
+
+   
+    
+}
